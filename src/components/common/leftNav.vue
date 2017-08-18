@@ -23,12 +23,12 @@
 <template>
     <div class="left-nav">
       <ul>
-        <li class="active">
+        <li :class="{active:$route.name=='pos'}" @click="go(['pos'])">
           <i class="icon iconfont icon-shouyin"></i>
           <div>收银</div>
         </li>
 
-        <li>
+        <li :class="{active:$route.name=='hotel'}" @click="go(['hotel'])">
           <i class="icon iconfont icon-dianpu"></i>
           <div>店铺</div>
         </li>
@@ -53,6 +53,7 @@
 </template>
 
 <script type="es6">
+    import {go} from '../../action'
     export default{
         name: 'leftNav',
         data(){
@@ -62,6 +63,12 @@
         },
         components: {
 
+        },
+        methods:{
+            go
+        },
+        created(){
+            console.log(this.$route.name)
         }
     }
 </script>
