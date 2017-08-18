@@ -60,7 +60,7 @@
               挂单
             </el-tab-pane>
             <el-tab-pane label="外卖">
-              外卖
+              外卖a
             </el-tab-pane>
           </el-tabs>
         </el-col>
